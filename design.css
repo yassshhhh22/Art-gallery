@@ -1,0 +1,80 @@
+body {
+    font-family: Hepta Slab;
+    background-color: #121214;
+    margin: 0;
+    padding: 20px;
+}
+
+.gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.artists {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.artist {
+    position: relative;
+    width: 302px; /* 8 cm width */
+    height: 302px; /* 8 cm height */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.artist img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.artist-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* Adjusted padding */
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+    text-align: center; /* Center text alignment */
+    box-sizing: border-box; /* Ensure padding doesn't affect the size */
+}
+
+.artist-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.artist-info p {
+    font-size: 14px;
+    line-height: 1.5; /* Added line-height for better readability */
+    margin: 0; /* Removed default margins */
+}
+
+.artist:hover {
+    transform: scale(1.05);
+}
+
+.artist:hover .artist-info {
+    opacity: 1;
+}
